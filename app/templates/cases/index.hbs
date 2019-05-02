@@ -1,0 +1,7 @@
+<Navigation/>
+<h2>cases/index</h2>
+
+{{#each this.model as |singleCase|}}
+  <CaseListing @case={{singleCase}} />
+{{/each}}
+{{outlet}}

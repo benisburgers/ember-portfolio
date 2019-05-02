@@ -1,0 +1,46 @@
+<Navigation/>
+<h2>cases/show</h2>
+
+<div class="jumbo show-listing">
+  <h3>{{#link-to "cases" class="inactive"}}exit{{/link-to}}</h3>
+  <div class="content">
+    <img src="/assets/images/screenshot-{{this.model.id}}.jpg" alt="" class="cases-thumbnail">
+    <h2 class="title">{{this.model.title}}</h2>
+    <div class="detail-section">
+      <div class="description">
+        <p>{{this.model.description}}</p>
+      </div>
+      <div class="learn">
+        <h3>What did I learn</h3>
+        <ul>
+          {{#each this.model.learn as |instance|}}
+            <li>{{instance}}</li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="different">
+        <h3>What would I do differently</h3>
+        <ul>
+          {{#each this.model.different as |instance|}}
+            <li>{{instance}}</li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="links">
+        <a target="_blank" href="{{this.model.website}}">Website</a>
+        <br>
+        <a target="_blank" href="{{this.model.repository}}">Repository</a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="back-and-forth">
+    {{#unless this.model.first}}
+      {{#link-to "cases.show" this.model.previous}}Previous{{/link-to}}
+    {{/unless}}
+
+    {{#unless this.model.last}}
+      {{#link-to "cases.show" this.model.next}}Next{{/link-to}}
+    {{/unless}}
+  </div>
+</div>
