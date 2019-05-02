@@ -47,6 +47,9 @@ table {
 	border-spacing: 0;
 }
 
+
+// MY OWN CODE
+
 $navbar-height: 50px;
 
 html {
@@ -90,6 +93,7 @@ a {
   text-decoration: none;
   color: green;
   font-weight: bold;
+  display: block;
 
   &.active {
     color: black;
@@ -104,10 +108,6 @@ a {
 img {
   max-width: 100%;
   display: inline-block;
-}
-
-button {
-  display: block;
 }
 
 .content {
@@ -142,9 +142,17 @@ button {
 }
 
 .center {
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .space-between {
   align-content: space-between;
+}
+
+.button {
+  border: 1px solid green;
+  padding: 10px;
+  border-radius: 5px;
 }
