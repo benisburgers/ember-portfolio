@@ -219,9 +219,17 @@ img {
 	}
 }
 
-.exit-button-background {
-	height: 25px;
-	width: 25px;
-	background: green;
-	border-radius: 50%;
+.exit-link {
+	.exit-button-background {
+		height: 25px;
+		width: 25px;
+		background-color: green;
+		border-radius: 50%;
+		transition: background-color .2s ease-in-out;
+	}
+	&:hover {
+		.exit-button-background {
+			background-color: red;
+		}
+	}
 }
