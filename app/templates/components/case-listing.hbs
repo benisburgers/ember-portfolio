@@ -1,6 +1,6 @@
-<article class="listing">
-  <div class="details">
-    <h3>{{#link-to "cases.show" case.id class=case.id}}{{this.case.title}}{{/link-to}}</h3>
+<li class="thumbnail cell span-6">
+  {{#link-to "cases.show" case.id class=case.id}}
+    <h3>{{this.case.title}}</h3>
     <img src="/assets/images/screenshot-{{case.id}}.jpg" alt="" class="cases-thumbnail">
-  </div>
-</article>
+  {{/link-to}}
+</li>

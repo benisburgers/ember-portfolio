@@ -107,7 +107,7 @@ a {
 
 img {
   max-width: 100%;
-  display: inline-block;
+  display: block;
 }
 
 .content {
@@ -123,13 +123,20 @@ img {
   padding-left: 30px;
   padding-right: 30px;
   box-sizing: border-box;
+	width: 100%;
 }
 
 .from-2 {
   grid-column-start: 2;
 }
+.from-3 {
+	grid-column: 3;
+}
 .to-10 {
   grid-column-end: 10;
+}
+.to-11 {
+	grid-column-end: 11;
 }
 .to-7 {
   grid-column-end: 7;
@@ -140,19 +147,53 @@ img {
 .to-12 {
   grid-column-end: 12;
 }
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.span-6 {
+	grid-column: span 6;
 }
 
 .space-between {
   align-content: space-between;
 }
 
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+}
+
 .button {
   border: 1px solid green;
   padding: 10px;
   border-radius: 5px;
+}
+
+.no-side-padding {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.thumbnail {
+	position: relative;
+	border: 1px solid black;
+	margin: 10px 0;
+
+	&:hover {
+		img {
+			opacity: 1;
+		}
+	}
+
+	img {
+		opacity: .5;
+	}
+
+	h3 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 }

@@ -1,7 +1,17 @@
 <Navigation/>
-<h2>cases/index</h2>
+<section class="cases grid space-between">
+  <header class="cell from-2 to-12">
+    <h2>Cases</h2>
+    <h3>Click on them to find out more</h3>
+  </header>
+  <ul class="thumbnails cell from-3 to-11 grid no-side-padding">
+    {{#each this.model as |singleCase|}}
+      <CaseListing @case={{singleCase}} />
+    {{/each}}
+  </ul>
+  <div class="button-container cell from-2 to-12 center">
+    {{#link-to "contact" class="button"}} contact {{/link-to}}
+  </div>
+</section>
 
-{{#each this.model as |singleCase|}}
-  <CaseListing @case={{singleCase}} />
-{{/each}}
 {{outlet}}
