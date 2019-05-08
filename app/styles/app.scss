@@ -50,7 +50,17 @@ table {
 
 // MY OWN CODE
 
+//breakpoints:
+$breakpoint-tablets: 481px;
+$breakpoint-large-tablets: 768px;
+$breakpoint-laptops: 1025px;
+
 $navbar-height: 50px;
+
+$section-side-padding: 30px;
+$section-top-padding: 20px;
+$section-bottom-padding: 20px;
+
 
 html {
   width: 100%;
@@ -63,20 +73,31 @@ body {
   margin: 0;
   top: 0;
   position: absolute;
+	font-family: Helvetica;
+	font-size: 16px;
+	overflow-x: hidden;
 }
 
 section {
-  height: calc(100vh - (2 * #{$navbar-height}));
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+	height: 100%;
+	max-height: 1000px;
+	padding-left: $section-side-padding;
+	padding-right: $section-side-padding;
+	padding-top: $section-top-padding;
+
+	> :last-child {
+		padding-bottom: $section-bottom-padding;
+	}
 }
 
 nav {
   height: $navbar-height;
+	padding-left: $section-side-padding;
+	padding-right: $section-side-padding;
 
   ul {
-    grid-column: 2 / span 10;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -108,9 +129,31 @@ img {
   display: block;
 }
 
+h1 {
+	font-size: 2.441em;
+}
+
+h2 {
+	font-size: 1.953em;
+}
+
+h3 {
+	font-size: 1.563em;
+}
+
+h4 {
+	font-size: 1.25em;
+}
+
+p {
+	margin-bottom: 1em;
+	line-height: 1.3em;
+}
+
 .content {
   max-width: 1200px;
   margin: 0 auto;
+	height: calc(100vh - (#{$navbar-height}));
 }
 
 .grid {
@@ -118,19 +161,20 @@ img {
   grid-template-columns: repeat(12, 1fr [col-start]);
   grid-column-gap: 15px;
   margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
   box-sizing: border-box;
 	width: 100%;
 
 	&.space-between {
 	  align-content: space-between;
 	}
-
 }
 
 .flex {
 	display: flex;
+
+	&.column {
+		flex-direction: column;
+	}
 
 	&.space-between {
 		justify-content: space-between;
@@ -145,31 +189,46 @@ img {
 	}
 }
 
+.cell {
+	grid-column-start: 1;
+	grid-column-end: 13;
+}
 
+@media(max-width: $breakpoint-tablets) {
+	.mobile-full-width {
+		width: 100vw;
+		margin-left: - $section-side-padding
+	}
+}
 
-.from-2 {
-  grid-column-start: 2;
-}
-.from-3 {
-	grid-column: 3;
-}
-.to-10 {
-  grid-column-end: 10;
-}
-.to-11 {
-	grid-column-end: 11;
-}
-.to-7 {
-  grid-column-end: 7;
-}
-.from-8 {
-  grid-column-start: 8;
-}
-.to-12 {
-  grid-column-end: 12;
-}
-.span-6 {
-	grid-column: span 6;
+@media(min-width: $breakpoint-tablets) {
+	.from-2 {
+	  grid-column-start: 2;
+	}
+	.from-3 {
+		grid-column: 3;
+	}
+	.from-8 {
+	  grid-column-start: 8;
+	}
+	.to-7 {
+	  grid-column-end: 7;
+	}
+	.to-8 {
+		grid-column-end: 8;
+	}
+	.to-10 {
+	  grid-column-end: 10;
+	}
+	.to-11 {
+		grid-column-end: 11;
+	}
+	.to-12 {
+	  grid-column-end: 12;
+	}
+	.span-6 {
+		grid-column: span 6;
+	}
 }
 
 .button {
@@ -178,31 +237,28 @@ img {
   border-radius: 5px;
 }
 
-.no-side-padding {
-	padding-left: 0;
-	padding-right: 0;
-}
-
 .align-right {
 	margin-left: auto;
 }
 
 .thumbnail {
 	position: relative;
-	border: 1px solid black;
-	margin: 10px 0;
+	border: 1px solid grey;
 
 	&:hover {
-		img {
+		.thumbnail-image {
 			opacity: 1;
+		}
+		.thumbnail-description {
+			opacity: 0;
 		}
 	}
 
-	img {
-		opacity: .5;
+	.thumbnail-image {
+		opacity: .3;
 	}
 
-	h3 {
+	.thumbnail-description {
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -232,4 +288,34 @@ img {
 			background-color: red;
 		}
 	}
+}
+
+@media(min-width: $breakpoint-tablets) and (max-width: $breakpoint-laptops) {
+	.tablet-full-length {
+		grid-column: 2 / span 10;
+	}
+}
+
+.strong {
+	font-weight: bold;
+}
+
+.margin-bottom-30 {
+	margin-bottom: 30px;
+}
+
+.margin-bottom-20 {
+	margin-bottom: 20px;
+}
+
+.margin-bottom-15 {
+	margin-bottom: 15px;
+}
+
+.margin-bottom-10 {
+	margin-bottom: 10px;
+}
+
+.border-radius-3 {
+	border-radius: 3px;
 }

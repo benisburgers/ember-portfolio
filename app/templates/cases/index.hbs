@@ -1,16 +1,15 @@
-<Navigation/>
 <section class="cases grid space-between">
-  <header class="cell from-2 to-12">
-    <h2>Cases</h2>
-    <h3>Click on them to find out more</h3>
+  <header class="cell from-2 to-12 margin-bottom-20">
+    <h2 class="margin-bottom-10">Cases</h2>
+    <h4>Click on them to find out more</h4>
   </header>
-  <ul class="thumbnails cell from-3 to-11 grid no-side-padding">
+  <ul class="thumbnails cell from-3 to-11 tablet-full-length grid">
     {{#each this.model as |singleCase|}}
       <CaseListing @case={{singleCase}} />
     {{/each}}
   </ul>
   <div class="cell from-2 to-12 flex justify-center">
-    {{#link-to "contact" class="button"}} contact {{/link-to}}
+    {{#link-to "contact" class="button"}} Contact {{/link-to}}
   </div>
 </section>
 

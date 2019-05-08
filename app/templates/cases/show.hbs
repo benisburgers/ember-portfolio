@@ -1,6 +1,5 @@
-<Navigation/>
 <section class="case {{this.model.id}} grid space-between">
-  <header class="cell from-2 to-12 flex space-between align-center">
+  <header class="cell from-2 to-12 flex space-between align-center margin-bottom-20">
     <h2>{{this.model.title}}</h2>
     {{#link-to "cases" class="inactive exit-link"}}
       <div class="exit-button-background">
@@ -10,32 +9,32 @@
   </header>
 
   <div class="text-container cell from-2 to-7">
-    <div class="description">
+    <div class="description margin-bottom-30">
       <p>{{this.model.description}}</p>
     </div>
-    <div class="learn">
-      <h3>What did I learn</h3>
+    <div class="learn margin-bottom-30">
+      <h3 class="margin-bottom-15">What did I learn</h3>
       <ul class="dashed-list">
         {{#each this.model.learn as |instance|}}
-          <li>{{instance}}</li>
+          <li class="margin-bottom-10">{{instance}}</li>
         {{/each}}
       </ul>
     </div>
-    <div class="different">
-      <h3>What would I do differently</h3>
+    <div class="different margin-bottom-30">
+      <h3 class="margin-bottom-15">What would I do differently</h3>
       <ul class="dashed-list">
         {{#each this.model.different as |instance|}}
-          <li>{{instance}}</li>
+          <li class="margin-bottom-10">{{instance}}</li>
         {{/each}}
       </ul>
     </div>
-    <div class="links">
-      <a target="_blank" rel="noopener" href={{this.model.website}}>Website</a>
+    <div class="links margin-bottom-30">
+      <a class="margin-bottom-10" target="_blank" rel="noopener" href={{this.model.website}}>Website</a>
       <a target="_blank" rel="noopener" href={{this.model.repository}}>Repository</a>
     </div>
   </div>
 
-  <div class="monitor-image-container cell from-8 to-12">
+  <div class="monitor-image-container cell from-8 to-1 margin-bottom-30">
     <img src="/assets/images/monitor-{{this.model.id}}.png" alt="Monitor image of {{this.model.title}}">
   </div>
 
