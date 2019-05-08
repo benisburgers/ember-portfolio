@@ -55,14 +55,16 @@ $breakpoint-tablets: 481px;
 $breakpoint-large-tablets: 768px;
 $breakpoint-laptops: 1025px;
 
+$content-max-width: 1200px;
+
 $navbar-height: 50px;
 
 $section-side-padding: 30px;
 $section-top-padding: 20px;
 $section-bottom-padding: 20px;
 
-$primary-color: #593138;
-$secondary-color: #2D7366;
+$primary-color: #5690CC;
+$secondary-color: #A1453F;
 
 $transition-time: .3s;
 
@@ -101,6 +103,7 @@ nav {
   height: $navbar-height;
 	padding-left: $section-side-padding;
 	padding-right: $section-side-padding;
+	max-width: $content-max-width;
 
   ul {
     display: flex;
@@ -121,7 +124,9 @@ a {
 	transition: color $transition-time ease-in-out;
 
 	&:hover {
-		color: $primary-color;
+		@media(min-width: $breakpoint-tablets) {
+			color: $primary-color;
+		}
 	}
 
 	&.active {
@@ -178,7 +183,7 @@ p {
 }
 
 .content {
-  max-width: 1200px;
+  max-width: $content-max-width;
   margin: 0 auto;
 	height: calc(100vh - (#{$navbar-height}));
 }
@@ -265,7 +270,9 @@ p {
 	transition: border-color $transition-time ease-in-out, color $transition-time ease-in-out;
 
 	&:hover {
-		border-color: $primary-color;
+		@media(min-width: $breakpoint-tablets) {
+			border-color: $primary-color;
+		}
 	}
 }
 
@@ -278,14 +285,16 @@ p {
 	border: 1px solid grey;
 
 	&:hover {
-		.thumbnail-image {
-			opacity: 1;
-			transition: opacity $transition-time ease-in-out;
-		}
+		@media(min-width: $breakpoint-tablets) {
+			.thumbnail-image {
+				opacity: 1;
+				transition: opacity $transition-time ease-in-out;
+			}
 
-		.thumbnail-description {
-			opacity: 0;
-			transition: opacity $transition-time ease-in-out;
+			.thumbnail-description {
+				opacity: 0;
+				transition: opacity $transition-time ease-in-out;
+			}
 		}
 	}
 
@@ -311,6 +320,8 @@ p {
 }
 
 .exit-link {
+	transition: transform $transition-time ease-in-out;
+
 	.exit-button-background {
 		height: 25px;
 		width: 25px;
@@ -320,15 +331,12 @@ p {
 	}
 
 	&:hover {
-		.exit-button-background {
-			background-color: $primary-color;
+		@media(min-width: $breakpoint-tablets) {
+			transform: rotate(180deg);
+			.exit-button-background {
+				background-color: $primary-color;
+			}
 		}
-	}
-}
-
-@media(min-width: $breakpoint-tablets) and (max-width: $breakpoint-laptops) {
-	.tablet-full-length {
-		grid-column: 2 / span 10;
 	}
 }
 
