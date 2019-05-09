@@ -92,7 +92,7 @@ section {
 	max-height: 1000px;
 	padding-left: $section-side-padding;
 	padding-right: $section-side-padding;
-	padding-top: $section-top-padding;
+	padding-top: calc(#{$section-top-padding} + #{$navbar-height});
 
 	> :last-child {
 		padding-bottom: $section-bottom-padding;
@@ -100,10 +100,12 @@ section {
 }
 
 nav {
+	position: fixed;
   height: $navbar-height;
 	padding-left: $section-side-padding;
 	padding-right: $section-side-padding;
 	max-width: $content-max-width;
+	background: rgba(white, 1);
 
   ul {
     display: flex;
@@ -122,12 +124,6 @@ a {
   font-weight: bold;
   display: block;
 	transition: color $transition-time ease-in-out;
-
-	&:hover {
-		@media(min-width: $breakpoint-tablets) {
-			color: $primary-color;
-		}
-	}
 
 	&.active {
 		color: $primary-color;
@@ -185,7 +181,7 @@ p {
 .content {
   max-width: $content-max-width;
   margin: 0 auto;
-	height: calc(100vh - (#{$navbar-height}));
+	height: 100vh;
 }
 
 .grid {
@@ -231,7 +227,18 @@ p {
 		width: 100vw;
 		margin-left: - $section-side-padding
 	}
+
+	nav {
+		box-shadow: 0px 2px 6px 0px rgba($primary-color, 0.15);
+	}
+
+	.exit-button-background {
+		position: fixed;
+		transform: translate(-100%,-50%)
+	}
 }
+
+//HIER
 
 @media(min-width: $breakpoint-tablets) {
 	.from-2 {
@@ -261,6 +268,40 @@ p {
 	.span-6 {
 		grid-column: span 6;
 	}
+
+	.button {
+		&:hover {
+			border-color: $primary-color;
+		}
+	}
+
+	.thumbnail {
+		&:hover {
+			.thumbnail-image {
+				opacity: 1;
+				transition: opacity $transition-time ease-in-out;
+			}
+			.thumbnail-description {
+				opacity: 0;
+				transition: opacity $transition-time ease-in-out;
+			}
+		}
+	}
+
+	.exit-link {
+		&:hover {
+			transform: rotate(180deg);
+			.exit-button-background {
+				background-color: $primary-color;
+			}
+		}
+	}
+
+	a {
+		&:hover {
+			color: $primary-color;
+		}
+	}
 }
 
 .button {
@@ -268,12 +309,6 @@ p {
   padding: 10px;
   border-radius: 5px;
 	transition: border-color $transition-time ease-in-out, color $transition-time ease-in-out;
-
-	&:hover {
-		@media(min-width: $breakpoint-tablets) {
-			border-color: $primary-color;
-		}
-	}
 }
 
 .align-right {
@@ -283,20 +318,6 @@ p {
 .thumbnail {
 	position: relative;
 	border: 1px solid grey;
-
-	&:hover {
-		@media(min-width: $breakpoint-tablets) {
-			.thumbnail-image {
-				opacity: 1;
-				transition: opacity $transition-time ease-in-out;
-			}
-
-			.thumbnail-description {
-				opacity: 0;
-				transition: opacity $transition-time ease-in-out;
-			}
-		}
-	}
 
 	.thumbnail-image {
 		opacity: .3;
@@ -329,15 +350,6 @@ p {
 		border-radius: 50%;
 		transition: background-color $transition-time ease-in-out;
 	}
-
-	&:hover {
-		@media(min-width: $breakpoint-tablets) {
-			transform: rotate(180deg);
-			.exit-button-background {
-				background-color: $primary-color;
-			}
-		}
-	}
 }
 
 .strong {
@@ -362,4 +374,8 @@ p {
 
 .border-radius-3 {
 	border-radius: 3px;
+}
+
+.full-height {
+	height: 100%;
 }
