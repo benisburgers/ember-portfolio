@@ -39,13 +39,14 @@
     <img src="/assets/images/monitor-{{this.model.id}}.png" alt="Monitor image of {{this.model.title}}">
   </div>
 
-  <div class="buttons-container cell from-2 to-12 flex align-center">
+  <div class="cell from-2 to-12 flex align-center">
     {{#unless this.model.first}}
-      {{#link-to "cases.show" this.model.previous class="button"}}Previous{{/link-to}}
+      {{#link-to "cases.show" this.model.previous class="direction-button previous"}}
+      {{/link-to}}
     {{/unless}}
 
     {{#unless this.model.last}}
-      {{#link-to "cases.show" this.model.next class="align-right button"}}Next{{/link-to}}
+      {{#link-to "cases.show" this.model.next class="align-right direction-button"}}{{/link-to}}
     {{/unless}}
   </div>
 

@@ -325,6 +325,36 @@ p {
 	}
 }
 
+.direction-button {
+	position: relative;
+	width: 25px;
+	height: 25px;
+
+	&.previous {
+		transform: rotate(180deg);
+	}
+
+	&:before, &:after {
+		content: '';
+		position: absolute;
+		width: 50%;
+		height: 2px;
+		background-color: $secondary-color;
+		transition: transform $transition-time ease-in-out, background-color $transition-time ease-in-out;
+		right: 0;
+	}
+
+	&:before {
+		transform: rotate(45deg) translate(0%, 100%);
+		top: 25%;
+	}
+
+	&:after {
+		transform: rotate(-45deg) translate(0%, -100%);
+		bottom: 25%;
+	}
+}
+
 @media(max-width: $breakpoint-tablets) {
 	.mobile-full-width {
 		width: 100vw;
@@ -381,6 +411,21 @@ p {
 			}
 			&:after {
 				transform: rotate(45deg);
+			}
+		}
+	}
+
+	.direction-button {
+		&:hover {
+			&:before, &:after {
+				background-color: $primary-color;
+			}
+			&:before {
+				transform: rotate(-135deg) translate(0%, -100%);
+			}
+
+			&:after {
+				transform: rotate(135deg) translate(0%, 100%);
 			}
 		}
 	}
