@@ -1,9 +1,10 @@
 <section class="case {{this.model.id}} grid space-between side-padding-30">
   <header class="cell from-2 to-12 flex space-between align-center margin-bottom-30">
     <h2>{{this.model.title}}</h2>
-    {{#link-to "cases" class="inactive exit-link"}}
-      <div class="exit-button-background">
-        <img src="/assets/images/invert-x.png" alt="exit button">
+    {{#link-to "cases" class="inactive"}}
+      <div class="exit-button-container fixed">
+        <div class="exit-button">
+        </div>
       </div>
     {{/link-to}}
   </header>
