@@ -7,6 +7,10 @@ module.exports = function(defaults) {
     // Add options here
     fingerprint: {
       exclude: ['assets/images/cases'],
+    },
+    autoprefixer: {
+      grid: true,
+      browsers: ['>1%'],
     }
   });
 
