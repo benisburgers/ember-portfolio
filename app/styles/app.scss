@@ -477,20 +477,12 @@ p {
 			" . biography biography biography biography biography  . portrait portrait portrait portrait . "
 			" . button-container button-container button-container button-container button-container button-container button-container button-container button-container button-container . " ;
 
-		header {
-			grid-area: header;
-		}
-
 		.biography {
 			grid-area: biography;
 		}
 
 		.portrait {
 			grid-area: portrait;
-		}
-
-		.button-container {
-			grid-area: button-container;
 		}
 	}
 
@@ -501,16 +493,8 @@ p {
 			" . thumbnails thumbnails thumbnails thumbnails thumbnails thumbnails thumbnails thumbnails thumbnails thumbnails . "
 			" . button-container button-container button-container button-container button-container button-container button-container button-container button-container button-container . ";
 
-		header {
-			grid-area: header;
-		}
-
 		.thumbnails {
 			grid-area: thumbnails;
-		}
-
-		.button-container {
-			grid-area: button-container;
 		}
 	}
 
@@ -521,20 +505,12 @@ p {
 		" . text text text text text . monitor monitor monitor monitor . "
 		" . buttons-container buttons-container buttons-container buttons-container buttons-container buttons-container buttons-container buttons-container buttons-container buttons-container . ";
 
-		header {
-			grid-area: header;
-		}
-
 		.text-container {
 			grid-area: text;
 		}
 
 		.monitor-image-container {
 			grid-area: monitor;
-		}
-
-		.buttons-container {
-			grid-area: buttons-container;
 		}
 	}
 
@@ -545,18 +521,22 @@ p {
 		" . headshot headshot headshot headshot headshot headshot . . . . . "
 		" . button-container button-container button-container button-container button-container button-container button-container button-container button-container button-container . ";
 
-		header {
-			grid-area: header;
-		}
-
 		.headshot {
 			grid-area: headshot;
+		}
+	}
+
+	section.grid {
+		header {
+			grid-area: header;
 		}
 
 		.button-container {
 			grid-area: button-container;
 		}
+
+		.buttons-container {
+			grid-area: buttons-container;
+		}
 	}
-
-
 }
