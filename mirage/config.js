@@ -37,14 +37,14 @@ export default function() {
       }
     }, {
       type: 'cases',
-      id: 'wingo',
+      id: 'portfolio',
       attributes: {
-        title: 'Binelli',
-        description: "Binelli is an info and signup page for a customer’s raffle. Creating a 12-column layout without a framework and using javascript to validate a form proved to be the biggest challenges.",
-        learn: ['How to use conditional javascript, HTML data-attributes, and regex to validate a form while the user is typing and provide them with live feedback', 'How to use URL Queries to create a personalized web-experience and prefill the form for the user', 'How to communicate clearly with the client and use BrowserStack for cross-browser checking'],
-        different: ['Use a framework to create a 12-column layout instead of using flexbox', 'Write more modular and clear javascript from the beginning'],
-        website: 'https://benisburgers.github.io/hado-portfolio/',
-        repository: 'https://github.com/benisburgers/hado_new'
+        title: 'Portfolio',
+        description: "This Portfolio… well, you’re looking at it. My goal was to demonstrate who I am and what my abilities are in a clear way. I designed my website from scratch in sketch, learned how to use ember.js, and finally developed this web application.",
+        learn: ['How to prototype a website in sketch and create a user-friendly interface', 'How to use ember.js to create a web application', 'How to recycle specific CSS classes to write as little code as possible'],
+        different: ['I would like to try the same project with another javascript library, such as react or angular'],
+        website: 'https://benibargera.com',
+        repository: 'https://github.com/benisburgers/ember-portfolio'
       }
     }]; //loop through the array and determine the index of each case/rental/object and whether it is first or last
     //provide these attributes to the object itself, to be used for conditional formating (previous and next buttons)
