@@ -9,7 +9,7 @@ module.exports = function(defaults) {
       exclude: ['assets/images/cases'],
     },
     autoprefixer: {
-      grid: "autoplace",
+      grid: true,
       browsers: ['>1%'],
     }
   });

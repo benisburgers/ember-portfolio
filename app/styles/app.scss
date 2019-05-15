@@ -456,4 +456,30 @@ p {
 			color: $primary-color;
 		}
 	}
+
+	.home {
+		grid-template-columns: repeat(12, 1fr);
+		// grid-template-rows: auto auto auto;
+		grid-template-areas:
+			" . header header header header header header header header header header . "
+			" . biography biography biography biography biography  . portrait portrait portrait portrait . "
+			" . button-container button-container button-container button-container button-container button-container button-container button-container button-container button-container . " ;
+
+		header {
+			grid-area: header;
+		}
+
+		.biography {
+			grid-area: biography;
+		}
+
+		.portrait {
+			grid-area: portrait;
+		}
+
+		.button-container {
+			grid-area: button-container;
+			align-self: end;
+		}
+	}
 }
