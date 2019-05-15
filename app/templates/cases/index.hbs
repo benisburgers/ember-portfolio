@@ -1,14 +1,14 @@
 <section class="cases grid space-between side-padding-30">
-  <header class="cell from-2 to-12 margin-bottom-20">
+  <header class="cell margin-bottom-20">
     <h2 class="margin-bottom-30">Cases</h2>
     <h4>Click on them to find out more</h4>
   </header>
-  <ul class="thumbnails cell from-2 to-12 grid">
+  <ul class="thumbnails cell flex wrap space-between content-center">
     {{#each this.model as |singleCase|}}
       <CaseListing @case={{singleCase}} />
     {{/each}}
   </ul>
-  <div class="cell from-2 to-12 flex justify-center">
+  <div class="cell flex justify-center button-container">
     {{#link-to "contact" class="button"}} Contact {{/link-to}}
   </div>
 </section>

@@ -1,5 +1,5 @@
 <section class="case {{this.model.id}} grid side-padding-30">
-  <header class="cell from-2 to-12 flex space-between align-center margin-bottom-50 margin-bottom-100-tablets">
+  <header class="cell flex space-between align-center margin-bottom-50 margin-bottom-100-tablets">
     <h2>{{this.model.title}}</h2>
     {{#link-to "cases" class="inactive"}}
       <div class="exit-button-container fixed">
@@ -9,7 +9,7 @@
     {{/link-to}}
   </header>
 
-  <div class="text-container cell from-2 to-7">
+  <div class="text-container cell">
     <div class="description margin-bottom-30">
       <p>{{this.model.description}}</p>
     </div>
@@ -35,11 +35,11 @@
     </div>
   </div>
 
-  <div class="monitor-image-container cell from-8 to-12 margin-bottom-30">
+  <div class="monitor-image-container cell margin-bottom-30">
     <img src="/assets/images/cases/monitors/monitor-{{this.model.id}}.png" alt="Monitor image of {{this.model.title}}">
   </div>
 
-  <div class="cell from-2 to-12 flex align-center">
+  <div class="buttons-container cell flex align-center">
     {{#unless this.model.first}}
       {{#link-to "cases.show" this.model.previous class="direction-button previous"}}
       {{/link-to}}
