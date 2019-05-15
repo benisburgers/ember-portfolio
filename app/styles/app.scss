@@ -169,7 +169,7 @@ p {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr [col-start]);
+  grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 15px;
 	margin: 0 auto;
   box-sizing: border-box;
