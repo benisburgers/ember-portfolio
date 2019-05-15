@@ -539,4 +539,15 @@ p {
 			grid-area: buttons-container;
 		}
 	}
+
+	nav {
+		.grid {
+			grid-template-areas:
+				" . nav nav nav nav nav nav nav nav nav nav . ";
+
+			ul {
+				grid-area: nav;
+			}
+		}
+	}
 }
