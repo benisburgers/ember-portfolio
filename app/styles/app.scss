@@ -470,7 +470,7 @@ p {
 
 	//Grid template areas
 
-	.home {
+	section.home {
 		grid-template-rows: auto 1fr auto;
 		grid-template-areas:
 			" . header header header header header header header header header header . "
@@ -494,7 +494,7 @@ p {
 		}
 	}
 
-	.cases {
+	section.cases {
 		grid-template-rows: auto 1fr auto;
 		grid-template-areas:
 			" . header header header header header header header header header header . "
@@ -514,7 +514,7 @@ p {
 		}
 	}
 
-	.case {
+	section.case {
 		grid-template-rows: auto 1fr auto;
 		grid-template-areas:
 		" . header header header header header header header header header header . "
@@ -535,6 +535,26 @@ p {
 
 		.buttons-container {
 			grid-area: buttons-container;
+		}
+	}
+
+	section.contact {
+		grid-template-rows: auto 1fr auto;
+		grid-template-areas:
+		" . header header header header header header header header header header . "
+		" . headshot headshot headshot headshot headshot headshot . . . . . "
+		" . button-container button-container button-container button-container button-container button-container button-container button-container button-container button-container . ";
+
+		header {
+			grid-area: header;
+		}
+
+		.headshot {
+			grid-area: headshot;
+		}
+
+		.button-container {
+			grid-area: button-container;
 		}
 	}
 
