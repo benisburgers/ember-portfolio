@@ -183,6 +183,10 @@ p {
 	&.space-between {
 	  align-content: space-between;
 	}
+
+	.self-center {
+		align-self: center;
+	}
 }
 
 .flex {
@@ -518,11 +522,11 @@ p {
 		grid-template-rows: auto 1fr auto;
 		grid-template-areas:
 		" . header header header header header header header header header header . "
-		" . headshot headshot headshot headshot headshot headshot . . . . . "
+		" . contact-content contact-content contact-content contact-content contact-content . . . . . . "
 		" . button-container button-container button-container button-container button-container button-container button-container button-container button-container button-container . ";
 
-		.headshot {
-			grid-area: headshot;
+		.contact-content {
+			grid-area: contact-content;
 		}
 	}
 
