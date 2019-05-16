@@ -93,7 +93,7 @@ section {
 	padding-top: calc(#{$navbar-height} + 5vh);
 
 	> :last-child {
-		padding-bottom: 0;
+		padding-bottom: 15px;
 	}
 }
 
@@ -182,10 +182,6 @@ p {
 
 	&.space-between {
 	  align-content: space-between;
-	}
-
-	.self-center {
-		align-self: center;
 	}
 }
 
@@ -478,15 +474,20 @@ p {
 		grid-template-rows: auto 1fr auto;
 		grid-template-areas:
 			" . header header header header header header header header header header . "
-			" . biography biography biography biography biography  . portrait portrait portrait portrait . "
+			" home-content home-content home-content home-content home-content home-content home-content home-content home-content home-content home-content home-content "
 			" . button-container button-container button-container button-container button-container button-container button-container button-container button-container button-container . " ;
 
-		.biography {
-			grid-area: biography;
-		}
+		.home-content.grid {
+			grid-area: home-content;
+			grid-template-areas: " . home-text home-text home-text home-text home-text . home-portrait home-portrait home-portrait home-portrait .";
 
-		.portrait {
-			grid-area: portrait;
+			.home-text {
+				grid-area: home-text;
+			}
+
+			.home-portrait {
+				grid-area: home-portrait;
+			}
 		}
 	}
 
@@ -554,4 +555,8 @@ p {
 			}
 		}
 	}
+}
+
+.self-center {
+	align-self: center;
 }
