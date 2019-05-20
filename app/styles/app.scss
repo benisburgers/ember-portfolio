@@ -116,6 +116,7 @@ a {
   color: $secondary-color;
   display: block;
 	transition: color $transition-time ease-in-out;
+	font-size: 1.1em;
 
 	&.active {
 		color: $primary-color;
@@ -267,6 +268,10 @@ p {
 
 .strong {
 	font-weight: bold;
+}
+
+.margin-bottom-10vh {
+	margin-bottom: 10vh;
 }
 
 .margin-bottom-50 {
