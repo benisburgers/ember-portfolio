@@ -86,6 +86,7 @@ body {
 
 .content {
 	height: 100%;
+	margin: 0 auto;
 }
 
 section {
@@ -168,10 +169,6 @@ p {
 	line-height: 1.5em;
 }
 
-.content {
-  margin: 0 auto;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -182,6 +179,10 @@ p {
 
 	&.space-between {
 	  align-content: space-between;
+	}
+
+	.self-center {
+		align-self: center;
 	}
 }
 
@@ -383,38 +384,6 @@ p {
 }
 
 @media(min-width: $breakpoint-tablets) {
-	.from-2 {
-	  grid-column-start: 2;
-	}
-	.from-3 {
-		grid-column: 3;
-	}
-	.from-8 {
-	  grid-column-start: 8;
-	}
-	.to-7 {
-	  grid-column-end: 7;
-	}
-	.to-8 {
-		grid-column-end: 8;
-	}
-	.to-10 {
-	  grid-column-end: 10;
-	}
-	.to-11 {
-		grid-column-end: 11;
-	}
-	.to-12 {
-	  grid-column-end: 12;
-	}
-	.span-6 {
-		grid-column: span 6;
-	}
-
-	.margin-bottom-100-tablets {
-		margin-bottom: 100px;
-	}
-
 	.button {
 		&:hover {
 			border-color: $primary-color;
@@ -465,6 +434,15 @@ p {
 	a {
 		&:hover {
 			color: $primary-color;
+		}
+	}
+
+	section {
+		height: 100%;
+		padding-top: calc(#{$navbar-height} + 5vh);
+
+		> :last-child {
+			padding-bottom: 30px;
 		}
 	}
 
@@ -555,8 +533,4 @@ p {
 			}
 		}
 	}
-}
-
-.self-center {
-	align-self: center;
 }
