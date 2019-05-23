@@ -9,6 +9,14 @@
     {{/link-to}}
   </header>
 
+  <div class="monitor-image-container cell margin-bottom-30">
+    <div class="links margin-bottom-30">
+      <a class="margin-bottom-10 strong" target="_blank" rel="noopener" href={{this.model.website}}>Visit Website</a>
+      <a target="_blank" rel="noopener" href={{this.model.repository}} class="strong">View Repository</a>
+    </div>
+    <img src="/assets/images/cases/monitors/monitor-{{this.model.id}}.png" alt="Monitor image of {{this.model.title}}">
+  </div>
+
   <div class="text-container cell">
     <div class="description margin-bottom-30">
       <p>{{this.model.description}}</p>
@@ -29,14 +37,6 @@
         {{/each}}
       </ul>
     </div>
-    <div class="links margin-bottom-30">
-      <a class="margin-bottom-10 strong" target="_blank" rel="noopener" href={{this.model.website}}>Visit Website</a>
-      <a target="_blank" rel="noopener" href={{this.model.repository}} class="strong">View Repository</a>
-    </div>
-  </div>
-
-  <div class="monitor-image-container cell margin-bottom-30">
-    <img src="/assets/images/cases/monitors/monitor-{{this.model.id}}.png" alt="Monitor image of {{this.model.title}}">
   </div>
 
   <div class="buttons-container cell flex align-center">

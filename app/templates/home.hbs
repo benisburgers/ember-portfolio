@@ -2,26 +2,29 @@
   <header class="cell margin-bottom-30">
     <h1>Who I Am</h1>
   </header>
-  <div class="home-content cell grid self-center margin-bottom-20">
-    <div class="home-text cell">
-      <p>
-        When I was 18, I moved to Canada to study International Relations at the University of British Columbia in Vancouver.
-        After graduating in 2018, I began to work outdoors.
-        Specifically, I worked as a rafting guide, ski instructor, and hiking guide in the Swiss Alps and the Rocky Mountains.
-      </p>
-      <p>
-        When not outside, I taught myself how to use <span class="strong">HTML</span>, <span class="strong">CSS</span>, <span class="strong">Javascript</span>, and <span class="strong">GIT</span>.
-        In January 2019, I finally started my first position as Frontend Developer at a media agency in Zurich, where I’m still working.
-        While at Bühler & Bühler, I have learned how to use <span class="strong">ES6</span>, <span class="strong">SASS</span>, and a framework named <span class="strong">Foundation</span>.
-        Currently I’m learning how to use <span class="strong">Ember.js</span>.
-      </p>
-    </div>
+  <div class="home-content cell grid self-center">
     <div class="home-portrait cell mobile-full-width">
-      <img src="/assets/images/portrait.jpg" class="border-radius-3" alt="This is me">
+      <img src="/assets/images/portrait.jpg" class="margin-bottom-20" alt="This is me">
+    </div>
+    <div class="home-text cell flex column space-between">
+      <div class="text margin-bottom-20">
+        <p>
+          When I was 18, I moved to Canada to study International Relations at the University of British Columbia in Vancouver.
+          After graduating in 2018, I began to work outdoors.
+          Specifically, I worked as a rafting guide, ski instructor, and hiking guide in the Swiss Alps and the Rocky Mountains.
+        </p>
+        <p>
+          When not outside, I taught myself how to use <span class="strong">HTML</span>, <span class="strong">CSS</span>, <span class="strong">Javascript</span>, and <span class="strong">GIT</span>.
+          In January 2019, I finally started my first position as Frontend Developer at a media agency in Zurich, where I’m still working.
+          While at Bühler & Bühler, I have learned how to use <span class="strong">ES6</span>, <span class="strong">SASS</span>, and a framework named <span class="strong">Foundation</span>.
+          Currently I’m learning how to use <span class="strong">Ember.js</span>.
+        </p>
+      </div>
+      <div class="button-container cell flex mobile-center">
+        {{#link-to "cases" class="button"}} View Projects {{/link-to}}
+      </div>
     </div>
   </div>
-  <div class="button-container cell flex justify-center">
-    {{#link-to "cases" class="button"}} Cases {{/link-to}}
-  </div>
+
 </section>
 {{outlet}}
